@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <style>
+            * {
+                transition: 0.3s linear;
+            }
+            /* 
+                TYPOGRAPHY STYLES
+
+                Note: Typography scale used and modified can be found at http://typecast.com/images/uploads/modernscale.css
+            */
+            body {
+                font-size: 100%;
+                font-family: "Alegreya Sans", sans-serif;
+                color: #434343;
+                font-weight: 300;
+                background-color: rgb(229,229,229);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: 700;
+            }
+
+            body,
+            caption,
+            th,
+            td,
+            input,
+            textarea,
+            select,
+            option,
+            legend,
+            fieldset,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size-adjust: 0.5;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+            }
+
+            .container {
+                font-size: 1em;
+                line-height: 1.25;
+                width: 100%;
+                height: fit-content;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
+            }
+
+            .boxes {
+                width: 18.5em;
+
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            @media (min-width: 43.75em) {
+                .boxes {
+                    width: 31.5em;
+
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+            }
+
+            .box {
+                width: 100%;
+            }
+
+            .box-left {
+                height: 23.5em;
+                background-color: #ffffff;
+                border-bottom-left-radius: 0.5em;
+                border-bottom-right-radius: 0.5em;
+            }
+
+            .box-right {
+                height: 21em;
+                background-color: #3682ce;
+                border-top-left-radius: 0.5em;
+                border-top-right-radius: 0.5em;
+
+                order: -1;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media (min-width: 43.75em) {
+                .box-left {
+                    width: 55%;
+                    border-top-left-radius: 0.5em;
+                    border-top-right-radius: 0.5em;
+                }
+                .box-right {
+                    width: 45%;
+                    border-bottom-right-radius: 0.5em;
+                    border-top-left-radius: 0;
+
+                    order: 1;
+                }
+                
+                .box-left,
+                .box-right {
+                    box-shadow: 4px 16px 12px rgba(15,22,29,0.25);
+                }
+            }
+
+            .app-info {
+                margin-top: 40%;
+                color: #7fa1c7;
+            }
+
+            .app-title,
+            .app-info {
+                text-align: center;
+            }
+
+            .small-text {
+                font-size: 0.75em;
+            }
+
+            .main-text {
+                font-size: 3em;
+                letter-spacing: 0.1em;
+                margin:auto;
+            }
+
+            .currency-btn-group {
+                width: 11.5em;
+            }
+
+            .input-group {
+                margin-bottom: 0.5rem;
+            }
+
+            .label {
+                display: block;
+                color: #ffffff;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                margin-bottom: 0.5em;
+            }
+            .text-field {
+                box-sizing: border-box;
+                padding: 0.75em;
+            }
+
+            .currency-names,
+            .text-field {
+                font-size: 0.75em;
+                font-weight: 700;
+                text-transform: uppercase;
+                width: 100%;
+            }
+
+            .currency-btn {
+                text-transform: capitalize;
+                color: #3f6eb6;
+                border: none;
+                margin-top: 0.5em;
+                cursor: pointer;
+            }
+
+            .currency-names,
+            .currency-btn {
+                text-transform: capitalize;
+                padding: 0.845em;
+                background: #fdfeff;
+                border-color: #fdfeff;
+            }
+            .transfer-money{
+                background-color: white;
+                border-radius: 5px;
+                width: 90%;
+                margin: 5%;
+            }
+            h4.bank-info, h4.app-title{
+                text-align: center;
+                font-size: 2em;
+            }
+            h4.bank-info{
+                color: #4d6d92;
+            }
+            form{
+                margin-left: 15px;
+                line-height: 2em;
+            }
+            .bank-info input[type=text]{
+                margin:10px;
+                width: 70%;
+                font-size: 1em;
+                line-height: 2em;
+                border-radius: 5px;
+            }
+            .bank-info label{
+                margin-left: 15px;
+            }
+            .bank-info input[type=button]{
+                width: 20%;
+                background-color: rgba(31, 94, 228, 0.9);
+                color:white;
+                height: fit-content;
+                border-radius: 5px;
+                border-color: transparent;
+                font-size: 1rem;
+                padding: 10px 10px 10px 10px;
+            }
+            .bank-info input[value=Submit]{
+                margin-left:25%;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <h4 class="app-title">Convert the Currency</h4>
+            <section class="boxes">
+                <div class="box box-left">
+                    <div class="app-info">
+                        <p class="small-text">You are going to get</p>
+                        <h1 class="main-text">0</h1>
+                        <p class="small-text">after the conversion</p>
+                    </div>
+                </div>
+                <div class="box box-right">
+                    <div class="currency-btn-group">
+                        <div class="input-group">
+                            <label for="input-currency" class="label small-text">enter amount</label>
+                            <input type="text" class="text-field" id="input-currency">
+                        </div>
+                        <div class="input-group">
+                            <label for="input-currency" class="label small-text">from</label>
+                            <select name="currency-from" class="currency-names" id="currency-from">
+                            <option value="--">select a currency</option>
+                            <option value="usd">US Dollar</option>
+                            <option value="euro">Euro</option>
+                        </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="currency-to" class="label small-text">to</label>
+                            <select name="currency-names" class="currency-names" id="currency-to">
+                            <option value="--">select a currency</option>
+                            <option value="usd">US Dollar</option>
+                            <option value="euro">Euro</option>
+                        </select>
+                        </div>
+                        <div class="input-group">
+                            <button class="currency-btn small-text" id="btnConvert">convert currency</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class = "transfer-money">
+                <h4 class ="bank-info">Your Bank Info</h4>
+                <!-- bank name, acc number, swift code, location, city, state, zip code, country-->
+                <form class ="bank-info">
+                    <label for="bank-name">Bank Name:</label><br>
+                    <input type="text" id="bank-name" name="bank-name"><br>
+                    <label for="accNumber">Account Number</label><br>
+                    <input type="text" id="accNumber" name="accNumber"><br>
+                    <label for="swiftCode">Swift Code</label><br>
+                    <input type="text" id="swiftCode" name="swiftCode"><br>
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address"><br>
+                    <label for="city">City</label><br>
+                    <input type="text" id="city" name="city"><br>
+                    <label for="address">State</label><br>
+                    <input type="text" id="state" name="state"><br>
+                    <label for="zipcode">Zipcode</label><br>
+                    <input type="text" id="zipcode" name="zipcode"><br>
+                    <label for="address">Country</label><br>
+                    <input type="text" id="country" name="country"><br>
+                    <input type="button" value="Submit">
+                    <input type="button" value="Reset">
+                </form>
+            </section>
+        </main>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script>
+            /** want to do:
+             * get input from currency-from
+             * get input from currency-names
+             * do a bunch of if statements
+             * output to main-text
+             */
+             $('#btnConvert').on('click', function(){
+                console.log("clicked");
+                var currencyFrom = $('#currency-from').val();
+                var currencyTo = $('#currency-to').val();
+                console.log(currencyFrom);
+                console.log(currencyTo);
+                var amount = $('#input-currency').val();
+                console.log(amount);
+                var result = 0;
+                if(currencyFrom === "usd" && currencyTo === "euro"){
+                    result = amount * 0.91;
+                } else if(currencyFrom === "euro" && currencyTo === "usd"){
+                    result = amount / 0.91;
+                }
+                else{
+                    result = amount;
+                }
+                console.log(result);
+                $('.main-text').text(result + " " +currencyTo.toUpperCase());
+             })
+
+
+        </script>
+    </body>
+</html>
