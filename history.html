@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <style>
+            * {
+                transition: 0.3s linear;
+            }
+            /* 
+                TYPOGRAPHY STYLES
+
+                Note: Typography scale used and modified can be found at http://typecast.com/images/uploads/modernscale.css
+            */
+            body {
+                font-size: 100%;
+                font-family: "Alegreya Sans", sans-serif;
+                color: #434343;
+                font-weight: 300;
+                background-color: rgb(229,229,229);
+            }
+            .container {
+                font-size: 1em;
+                line-height: 1.25;
+                width: 100%;
+                height: fit-content;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction:column;
+            }
+            .input-group {
+                margin-bottom: 0.5rem;
+            }
+
+            .label {
+                display: block;
+                color: #ffffff;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                margin-bottom: 0.5em;
+            }
+            .text-field {
+                box-sizing: border-box;
+                padding: 0.75em;
+            }
+
+            .currency-names,
+            .text-field {
+                font-size: 0.75em;
+                font-weight: 700;
+                text-transform: uppercase;
+                width: 100%;
+            }
+
+            .currency-btn {
+                text-transform: capitalize;
+                color: #3f6eb6;
+                border: none;
+                margin-top: 0.5em;
+                cursor: pointer;
+            }
+
+            .currency-names,
+            .currency-btn {
+                text-transform: capitalize;
+                padding: 0.845em;
+                background: #fdfeff;
+                border-color: #fdfeff;
+            }
+            .volunteer-info-container{
+                background-color: white;
+                border-radius: 5px;
+                width: 90%;
+                margin: 5%;
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
+            h4.volunteer-info{
+                margin-bottom:0;
+                margin-top:20px;
+                color: #4d6d92;
+                text-align: center;
+                font-size: 2em;
+                padding:20px;
+            }
+            form{
+                width:100%;
+                line-height: 2em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .volunteer-info input[type=text]{
+                margin:10px;
+                width: 70%;
+                font-size: 1em;
+                line-height: 2em;
+                border-radius: 5px;
+            }
+            .volunteer-info label{
+                margin-left: 15px;
+            }
+            .volunteer-info input[type=button]{
+                width: fit-content;
+                background-color: rgba(31, 94, 228, 0.9);
+                color:white;
+                height: fit-content;
+                border-radius: 5px;
+                border-color: transparent;
+                font-size: 1rem;
+                padding: 10px 10px 10px 10px;
+                place-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <section class = "volunteer-info-container">
+                <h4 class ="volunteer-info">In progress lololl</h4>
+                <p class="volunteer-info">text placeholder explaining server tutorial stuffs</p>
+                <!-- bank name, acc number, swift code, location, city, state, zip code, country-->
+                <form class ="volunteer-info">
+                    <label for="bank-name">API Address</label>
+                    <input type="text" id="API-address" name="API-address" class='volunteer-info-input'><br>
+                    <input type="button" onclick="location.href='success.html';" id ="volunteer-info-submit" value="Set Up">
+                </form>
+            </section>
+        </main>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script>
+        </script>
+    </body>
+</html>
