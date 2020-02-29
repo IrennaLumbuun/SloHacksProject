@@ -15,38 +15,10 @@
             display:flex;
             flex-direction: column;
             }
-            #nav{
-                display:grid;
-                }
-            ul {
-                list-style-type: none;
-                text-decoration: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                display:flex;
-                justify-content: center;
-            }
-            a{
-                text-decoration: none;
-            }
-
-            a .option {
-                background-color: rgba(31, 94, 228, 0.9);
-                margin: 10px;
-                padding:0.5em;
-                display:grid;
-                place-items: center;
-                color: white;
-                text-align: center;
-                font-size:1em;
-            }
-
-            a .option:hover {
-                color: rgb(54, 54, 54);
-            }
+            
             #items{
                 width: 100%;
+                margin-top:20%;
                 display: flex;
                 flex-direction: column;
                 height: fit-content;
@@ -92,24 +64,7 @@
                 <p id ="balance">placeholder</p>
             </div>
         </div>
-        <div id="nav">
-            <ul>
-            <!-- this is to load the site below the button, in userdashboard.html
-              <a href="#" onclick="load('transfer', 'transfer.html')"><li class="option">Transfer Money</li></a>
-              <a href=# onclick="load('volunteer', 'volunteer.html')"><li class="option">Get Free XRP!</li></a>
-            -->
-            <a href="transfer.html"><li class="option">Transfer Money</li></a>
-            <a href="volunteer.html"><li class="option">Get Free XRP!</li></a>
-            </ul>
-          </div>
-            <div id="container"></div>
           <script>
-            /*
-            function load(id, source) {
-              document.getElementById("container").innerHTML = '<object id =' + id + ' type="text/html" data=' + source + ' ></object>';
-            }
-            window.onload=load('transfer', 'transfer.html');
-            */
           </script>
     </body>
 </html>

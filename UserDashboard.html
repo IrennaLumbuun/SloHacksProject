@@ -16,25 +16,6 @@
                 display: flex;
                 flex-direction: row;
             }
-            #current-balance-container {
-                width: 100%;
-            }
-            #nav{
-                display:grid;
-                }
-            ul {
-                list-style-type: none;
-                text-decoration: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                display:flex;
-                justify-content: center;
-                display:flex;
-            }
-            a{
-                text-decoration: none;
-            }
 
             a .option {
                 background-color: rgba(31, 94, 228, 0.9);
@@ -53,29 +34,10 @@
             a .option:hover {
                 color: rgb(54, 54, 54);
             }
-            #items{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                height: fit-content;
-                margin-top: 25%;
-            }
-            
-            #transfer, #volunteer{
-                height:100%;
-                width:100%;
-            }
-            h1{
-                padding-top: 10px;;
-                color: rgba(1, 1, 1, 0.75);
-                font-size: 1.5em;
-                text-align: center;
-                text-transform: none;
-                font-weight: 300;
-            }
             
             #container{
                 height:100%;
+                width:100%;
             }
             aside{
                 padding: 5px;
@@ -119,16 +81,20 @@
                 font-weight: bold;
             }
 
+            #currBalance, #history, #transfer, #volunteer{
+                height:100%;
+                width:100%;
+            }
         </style>
     </head>
     <body>
         <aside>
             <div id = "table-of-content">
                 <ul id="content-nav">
-                <a href ="#"><li>Current Balance</li></a>
-                <a href ="#"><li>History</li></a>
-                <a href ="#"><li>Transfer Money</li></a>
-                <a href ="#"><li>Get Free XRP</li></a>
+                <a href ="#" onclick="load('currBalance', 'current-balance.html')"><li>Current Balance</li></a>
+                <a href ="#" onclick="load('history', 'history.html')"><li>Transaction History</li></a>
+                <a href ="#" onclick="load('transfer', 'transfer.html')"><li>Transfer Money</li></a>
+                <a href ="#" onclick="load('volunteer', 'volunteer.html')"><li>Get Free XRP</li></a>
                 </ul>
             </div>
         </aside>
