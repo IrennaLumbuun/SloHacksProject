@@ -32,13 +32,16 @@
 
             a .option {
                 background-color: rgba(31, 94, 228, 0.9);
-                margin: 10px;
-                padding:0.5em;
+                margin: 1em;
+                padding:1em;
                 display:grid;
+                font-weight: 500;
+                text-transform: capitalize;
                 place-items: center;
                 color: white;
                 text-align: center;
                 font-size:1em;
+                border-radius: 5px;
             }
 
             a .option:hover {
@@ -49,23 +52,22 @@
                 display: flex;
                 flex-direction: column;
                 height: fit-content;
+                margin-top: 25%;
             }
             #current-balance{
                 width: 70%;
                 height: fit-content;
-                border-radius: 5px;
+                border-radius: 10px;
                 margin: 10px;
                 background-color: rgba(255, 255, 255, 0.6);
                 place-self: center;
-
-                place-self:center;
             }
             #transfer, #volunteer{
                 height:100%;
                 width:100%;
             }
             h1{
-                place-self: center;
+                padding-top: 10px;;
                 color: rgba(1, 1, 1, 0.75);
                 font-size: 1.5em;
                 text-align: center;
@@ -87,8 +89,9 @@
     <body>
         <div id="items">
             <div id = "current-balance">
-                <h1>Your current Balance: </h1>
+                <h1>Your current balance is </h1>
                 <p id ="balance">placeholder</p>
+                <h1></h1>
             </div>
         </div>
         <div id="nav">

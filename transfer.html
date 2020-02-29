@@ -201,7 +201,7 @@
                 color: #4d6d92;
             }
             form{
-                margin-left: 15px;
+                margin-left: 20%;
                 line-height: 2em;
             }
             .bank-info input[type=text]{
@@ -225,7 +225,7 @@
                 padding: 10px 10px 10px 10px;
             }
             .bank-info input[value=Submit]{
-                margin-left:25%;
+                margin-left:15%;
             }
         </style>
     </head>
@@ -273,23 +273,23 @@
                 <!-- bank name, acc number, swift code, location, city, state, zip code, country-->
                 <form class ="bank-info">
                     <label for="bank-name">Bank Name:</label><br>
-                    <input type="text" id="bank-name" name="bank-name"><br>
+                    <input type="text" id="bank-name" name="bank-name" class='bank-info-input'><br>
                     <label for="accNumber">Account Number</label><br>
-                    <input type="text" id="accNumber" name="accNumber"><br>
+                    <input type="text" id="accNumber" name="accNumber" class='bank-info-input'><br>
                     <label for="swiftCode">Swift Code</label><br>
-                    <input type="text" id="swiftCode" name="swiftCode"><br>
+                    <input type="text" id="swiftCode" name="swiftCode" class='bank-info-input'><br>
                     <label for="address">Address</label><br>
-                    <input type="text" id="address" name="address"><br>
+                    <input type="text" id="address" name="address" class='bank-info-input'><br>
                     <label for="city">City</label><br>
-                    <input type="text" id="city" name="city"><br>
+                    <input type="text" id="city" name="city" class='bank-info-input'><br>
                     <label for="address">State</label><br>
-                    <input type="text" id="state" name="state"><br>
+                    <input type="text" id="state" name="state" class='bank-info-input'><br>
                     <label for="zipcode">Zipcode</label><br>
-                    <input type="text" id="zipcode" name="zipcode"><br>
+                    <input type="text" id="zipcode" name="zipcode" class='bank-info-input'><br>
                     <label for="address">Country</label><br>
-                    <input type="text" id="country" name="country"><br>
-                    <input type="button" value="Submit">
-                    <input type="button" value="Reset">
+                    <input type="text" id="country" name="country" class='bank-info-input'><br>
+                    <input type="button" id ="bank-info-submit" value="Submit">
+                    <input type="button" id = "bank-info-reset" value="Reset">
                 </form>
             </section>
         </main>
@@ -322,6 +322,9 @@
                 $('.main-text').text(result + " " +currencyTo.toUpperCase());
              })
 
+             $('#bank-info-reset').on('click', function(){
+                 $('.bank-info-input').val('');
+             })
 
         </script>
     </body>
