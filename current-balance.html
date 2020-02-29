@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            html,
+            body {
+            background-color: rgb(229,229,229);
+            height: 100%;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            color:white;
+            display:flex;
+            flex-direction: column;
+            }
+            #nav{
+                display:grid;
+                }
+            ul {
+                list-style-type: none;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                display:flex;
+                justify-content: center;
+            }
+            a{
+                text-decoration: none;
+            }
+
+            a .option {
+                background-color: rgba(31, 94, 228, 0.9);
+                margin: 10px;
+                padding:0.5em;
+                display:grid;
+                place-items: center;
+                color: white;
+                text-align: center;
+                font-size:1em;
+            }
+
+            a .option:hover {
+                color: rgb(54, 54, 54);
+            }
+            #items{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+            }
+            #current-balance{
+                width: 70%;
+                height: fit-content;
+                border-radius: 5px;
+                margin: 10px;
+                background-color: rgba(255, 255, 255, 0.6);
+                place-self: center;
+
+                place-self:center;
+            }
+            #transfer, #volunteer{
+                height:100%;
+                width:100%;
+            }
+            h1{
+                place-self: center;
+                color: rgba(1, 1, 1, 0.75);
+                font-size: 1.5em;
+                text-align: center;
+                text-transform: none;
+                font-weight: 300;
+            }
+            #balance{
+                text-align: center;
+                font-size: 2em;
+                font-weight: 400;
+                color: black;
+            }
+            #container{
+                height:100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="items">
+            <div id = "current-balance">
+                <h1>Your current Balance: </h1>
+                <p id ="balance">placeholder</p>
+            </div>
+        </div>
+        <div id="nav">
+            <ul>
+            <!-- this is to load the site below the button, in userdashboard.html
+              <a href="#" onclick="load('transfer', 'transfer.html')"><li class="option">Transfer Money</li></a>
+              <a href=# onclick="load('volunteer', 'volunteer.html')"><li class="option">Get Free XRP!</li></a>
+            -->
+            <a href="transfer.html"><li class="option">Transfer Money</li></a>
+            <a href="volunteer.html"><li class="option">Get Free XRP!</li></a>
+            </ul>
+          </div>
+            <div id="container"></div>
+          <script>
+            /*
+            function load(id, source) {
+              document.getElementById("container").innerHTML = '<object id =' + id + ' type="text/html" data=' + source + ' ></object>';
+            }
+            window.onload=load('transfer', 'transfer.html');
+            */
+          </script>
+    </body>
+</html>

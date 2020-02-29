@@ -11,8 +11,13 @@
             text-transform: uppercase;
             font-weight: bold;
             color:white;
-            display:flex;
-            flex-direction: column;
+            }
+            body {
+                display: flex;
+                flex-direction: row;
+            }
+            #current-balance-container {
+                width: 100%;
             }
             #nav{
                 display:grid;
@@ -25,6 +30,7 @@
                 overflow: hidden;
                 display:flex;
                 justify-content: center;
+                display:flex;
             }
             a{
                 text-decoration: none;
@@ -54,14 +60,7 @@
                 height: fit-content;
                 margin-top: 25%;
             }
-            #current-balance{
-                width: 70%;
-                height: fit-content;
-                border-radius: 10px;
-                margin: 10px;
-                background-color: rgba(255, 255, 255, 0.6);
-                place-self: center;
-            }
+            
             #transfer, #volunteer{
                 height:100%;
                 width:100%;
@@ -74,44 +73,76 @@
                 text-transform: none;
                 font-weight: 300;
             }
-            #balance{
-                text-align: center;
-                font-size: 2em;
-                font-weight: 400;
-                color: black;
-            }
+            
             #container{
                 height:100%;
+            }
+            aside{
+                padding: 5px;
+                text-align: center;
+            }
+            ul#content-nav {
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                color:white;
+                padding: 1.8rem 5px 1.8rem 5px;
+                list-style-position: inside;
+                line-height: 1.5rem;
+                margin-bottom: 5px;
+            }
+            #table-of-content{
+                position: sticky;
+                position: -webkit-sticky;
+                top:10px;
+                height: 100%;
+                background-color: rgba(31, 94, 228, 0.9);
+                width:max-content;
+            }
+            a, #table-of-content{
+                font-family: "Open Sans", OpenSans, "Helvetica Neue", Arial, sans-serif;
+                font-size: 0.8rem;
+                letter-spacing: 0.01em;
+                font-weight:bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding:10px;
+                color:white;
+            }
+            #table-of-content a:visited li{
+                color:white;
+            }
+            #table-of-content a:hover li{
+                color:black;
+            }
+            #table-of-content a:active li{
+                font-weight: bold;
             }
 
         </style>
     </head>
     <body>
-        <div id="items">
-            <div id = "current-balance">
-                <h1>Your current balance is </h1>
-                <p id ="balance">placeholder</p>
-                <h1></h1>
+        <aside>
+            <div id = "table-of-content">
+                <ul id="content-nav">
+                <a href ="#"><li>Current Balance</li></a>
+                <a href ="#"><li>History</li></a>
+                <a href ="#"><li>Transfer Money</li></a>
+                <a href ="#"><li>Get Free XRP</li></a>
+                </ul>
             </div>
+        </aside>
+        <div id="container">
+        
+       
         </div>
-        <div id="nav">
-            <ul>
-            <!-- this is to load the site below the button, in userdashboard.html
-              <a href="#" onclick="load('transfer', 'transfer.html')"><li class="option">Transfer Money</li></a>
-              <a href=# onclick="load('volunteer', 'volunteer.html')"><li class="option">Get Free XRP!</li></a>
-            -->
-            <a href="transfer.html"><li class="option">Transfer Money</li></a>
-            <a href="volunteer.html"><li class="option">Get Free XRP!</li></a>
-            </ul>
-          </div>
-            <div id="container"></div>
           <script>
-            /*
+            
             function load(id, source) {
               document.getElementById("container").innerHTML = '<object id =' + id + ' type="text/html" data=' + source + ' ></object>';
             }
-            window.onload=load('transfer', 'transfer.html');
-            */
+            window.onload=load('currBalance', 'current-balance.html');
+            
           </script>
     </body>
 </html>
