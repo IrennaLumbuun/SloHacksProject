@@ -33,3 +33,7 @@ $(function() {
     });
   });
   
+  function getInfo() {
+    let email = getElementById("email").value;
+    let password = getElementById("password").value;
+  }
