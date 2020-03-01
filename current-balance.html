@@ -58,11 +58,15 @@
             #container{
                 height:100%;
             }
-            #pay-button{
+            #button-container{
+                display:flex;
+                justify-content: center;
+
+            }
+            #pay-button, #connect-to-portal{
                 width:30%;
-                margin-left:35%;
                 font-size: 1rem;
-                margin-bottom:10px;
+                margin-bottom:1rem;
                 background-color: #4A6E82;
                 border-radius: 10px;;
                 padding:10px;
@@ -84,15 +88,46 @@
             <br>
             <div class = "balance-owed">
                 <h1>Balance Owed: </h1>
-                <p class ="balance" id="balance-owed-balance" value="balanceowed">placeholder</p>
-                <button id="pay-button">Pay Balance</button>
+                <p class ="balance" id="balance-owed-balance" value="balanceowed">--</p>
+                <div id="button-container">
+                    <button id="connect-to-portal">Connect to Portal</button>
+                    <button id="pay-button">Pay Balance</button>
+                </div>
             </div>
         </div>
+        <script src="jquery-3.4.1.min.js"></script>
           <script>
               var currentbalance = document.getElementById("current-balance-balance");
               currentbalance.value = 40;
-              var balanceowed = document.getElementById("balance-owed-balance");
-              balanceowed.value = 40
+                
+            /*when button "connect to portal" is clicked, 
+             1.balance owed is displayed.
+             2. text on "connect to portal" is changed to "connected"
+             3. button is disabled*/
+              $('#connect-to-portal').on('click', function(){
+                  $('#balance-owed-balance').text('30');
+                  $('#connect-to-portal')
+                    .text('connected')
+                    .prop('disabled', true)
+                    .css("background-color", "rgba(74, 110, 130, 0.8)"); //change color to indicate that button is disabled
+              })
+              /*when pay button is clicked
+               * 1. check if currentbalance - balanceowed > 0
+               * a. yes -> currentBalance -= balanceOwed. BalanceOwed = 0.
+               * b. no -> go to fail.html
+               */
+              $('#pay-button').on('click', function(){
+                  var currBalance = Number($('#current-balance-balance').text());
+                  var balanceOwed = Number($('#balance-owed-balance').text());
+                  if(currBalance >= balanceOwed){
+                    var diff= (currBalance-balanceOwed).toString();
+                    $('#current-balance-balance').text(diff);
+                    $('#balance-owed-balance').text('0');
+                  }
+                  else{
+                      window.location.replace('fail.html');
+                  }
+              })
           </script>
     </body>
 </html>
