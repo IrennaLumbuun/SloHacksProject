@@ -1,6 +1,14 @@
 .homepage-3.slider_area {
   background-image: url(http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/bg-shape/home-3-bg.png);
-  height: 1000px;
+  height: 200%;
+  margin-top: -10%;
+}
+
+.logo {
+  margin-top: 15%;
+  width: 15%;
+  height: auto;
+  margin-left: -3%;
 }
 
 .slider_area {
