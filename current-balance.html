@@ -3,6 +3,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script></script>
+        
         <style>
             html,
             body {
@@ -95,7 +97,6 @@
                 </div>
             </div>
         </div>
-        <script src="jquery-3.4.1.min.js"></script>
           <script>
               var currentbalance = document.getElementById("current-balance-balance");
               currentbalance.value = 400;
@@ -110,7 +111,7 @@
                     .text('connected')
                     .prop('disabled', true)
                     .css("background-color", "rgba(74, 110, 130, 0.8)"); //change color to indicate that button is disabled
-              })
+              });
               /*when pay button is clicked
                * 1. check if currentbalance - balanceowed > 0
                * a. yes -> currentBalance -= balanceOwed. BalanceOwed = 0.
@@ -127,7 +128,7 @@
                   else{
                       window.location.replace('fail.html');
                   }
-              })
+              });
           </script>
     </body>
 </html>
