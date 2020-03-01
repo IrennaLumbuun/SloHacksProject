@@ -30,6 +30,9 @@
                 margin: 10px;
                 background-color: rgba(255, 255, 255, 0.6);
                 place-self: center;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
 
                 place-self:center;
             }
@@ -54,6 +57,16 @@
             #container{
                 height:100%;
             }
+            #pay-button{
+                width:30%;
+                margin-left:35%;
+                font-size: 1rem;
+                margin-bottom:10px;
+                background-color: blue;
+                border-radius: 10px;;
+                padding:10px;
+                color:white;
+            }
 
         </style>
     </head>
@@ -67,6 +80,7 @@
             <div class = "balance-owed">
                 <h1>Balance Owed: </h1>
                 <p class ="balance" id="balance-owed-balance">placeholder</p>
+                <button id="pay-button">Pay Balance</button>
             </div>
         </div>
           <script>

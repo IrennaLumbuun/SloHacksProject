@@ -215,7 +215,7 @@
                 margin-left: 15px;
             }
             .bank-info input[type=button]{
-                width: 20%;
+                width: fit-to-content;
                 background-color: rgba(31, 94, 228, 0.9);
                 color:white;
                 height: fit-content;
@@ -224,7 +224,7 @@
                 font-size: 1rem;
                 padding: 10px 10px 10px 10px;
             }
-            .bank-info input[value=Submit]{
+            .bank-info input#bank-info-transfer{
                 margin-left:15%;
             }
         </style>
@@ -288,7 +288,7 @@
                     <input type="text" id="zipcode" name="zipcode" class='bank-info-input'><br>
                     <label for="address">Country</label><br>
                     <input type="text" id="country" name="country" class='bank-info-input'><br>
-                    <input type="button" id ="bank-info-submit" value="Submit">
+                    <input type="button" id ="bank-info-transfer" value="Add to Wallet">
                     <input type="button" id = "bank-info-reset" value="Reset">
                 </form>
             </section>
