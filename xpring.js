@@ -88,9 +88,7 @@ async function connectAndSend() {
 	    process.exit();
 	  });
 	}).catch(console.error);
-
 }
-
 
 function createOrder(direction, currency, counterparty, value, xrpValue) {
 	return {

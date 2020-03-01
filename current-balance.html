@@ -82,30 +82,30 @@
     <body>
         <div id="items">
             <div class = "current-balance">
-                <h1>Your current Balance: </h1>
-                <p class ="balance" id="current-balance-balance" value="currentbalance.value">40</p>
+                <h1>Your current Balance (US Dollars): </h1>
+                <p class ="balance" id="current-balance-balance" value="currentbalance.value">400.00</p>
             </div>
             <br>
             <div class = "balance-owed">
                 <h1>Balance Owed: </h1>
                 <p class ="balance" id="balance-owed-balance" value="balanceowed">--</p>
                 <div id="button-container">
-                    <button id="connect-to-portal">Connect to Portal</button>
-                    <button id="pay-button">Pay Balance</button>
+                    <button id="connect-to-portal" method="POST" action="/getMoney">Connect to Portal</button>
+                    <button id="pay-button" method="GET" action="/transfer">Pay Balance</button>
                 </div>
             </div>
         </div>
         <script src="jquery-3.4.1.min.js"></script>
           <script>
               var currentbalance = document.getElementById("current-balance-balance");
-              currentbalance.value = 40;
+              currentbalance.value = 400;
                 
             /*when button "connect to portal" is clicked, 
              1.balance owed is displayed.
              2. text on "connect to portal" is changed to "connected"
              3. button is disabled*/
               $('#connect-to-portal').on('click', function(){
-                  $('#balance-owed-balance').text('30');
+                  $('#balance-owed-balance').text('1000.00');
                   $('#connect-to-portal')
                     .text('connected')
                     .prop('disabled', true)
