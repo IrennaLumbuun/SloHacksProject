@@ -1,133 +1,54 @@
-<html>
-    <head>
-      
-    </head>
-    <body>
-        <div class="form">
-      
-            <ul class="tab-group">
-              <li class="tab active"><a href="#signup">Sign Up</a></li>
-              <li class="tab"><a href="#login">Log In</a></li>
-            </ul>
-            
-            <div class="tab-content">
-              <div id="signup">   
-                <h1>Sign Up for Free</h1>
-                
-                <form action="/" method="post">
-                
-                <div class="top-row">
-                  <div class="field-wrap">
-                    <label>
-                      First Name<span class="req">*</span>
-                    </label>
-                    <input type="text" required autocomplete="off" />
-                  </div>
-              
-                  <div class="field-wrap">
-                    <label>
-                      Last Name<span class="req">*</span>
-                    </label>
-                    <input type="text"required autocomplete="off"/>
-                  </div>
+<link href="LaunchingPage.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i" rel="stylesheet">
+<link href="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://marveltheme.com/tf/html/crypcash/crypcash-a/style.css" rel="stylesheet">
+<div class="slider-area">
+    <section id="slider-section" class="homepage-3 slider_area">
+    <div class="light-bg">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12 ">
+            <div class=" slide-caption-inner slider-text">
+                <h2 class="animated wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s"> Lightning Fast <br> 
+                    Currency Exchange with No Fee</h2>
+                <p class="animated wow  fadeInLeft" data-wow-duration="2s" data-wow-delay=".6s">
+                    Are you frustrated with the overwhelming process of converting your currency
+                    into something else? <br>
+                    We are here to help!</p>
+                <div class="slider-links ">
+                <ul>
+                    <li><a href="ContactUs.html" class="slider-btn animated wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">CONTACT US</a></li>
+                    <li><a href="LogIn.html" class="slider-btn slider-btn-2 wow  animated  fadeInUp" data-wow-duration="2s"
+                        data-wow-delay=".6s">LOGIN/SIGN UP</a></li>
+                </ul>
                 </div>
-      
-                <div class="field-wrap">
-                  <label>
-                    Email Address<span class="req">*</span>
-                  </label>
-                  <input type="email"required autocomplete="off"/>
-                </div>
-                
-                <div class="field-wrap">
-                  <label>
-                    Set A Password<span class="req">*</span>
-                  </label>
-                  <input type="password"required autocomplete="off"/>
-                </div>
-                
-                <button type="submit" class="button button-block"/>Get Started</button>
-                
-                </form>
-      
-              </div>
-              
-              <div id="login">   
-                <h1>Welcome Back!</h1>
-                
-                <form action="/" method="post">
-                
-                  <div class="field-wrap">
-                  <label>
-                    Email Address<span class="req">*</span>
-                  </label>
-                  <input type="email"required autocomplete="off"/>
-                </div>
-                
-                <div class="field-wrap">
-                  <label>
-                    Password<span class="req">*</span>
-                  </label>
-                  <input type="password"required autocomplete="off"/>
-                </div>
-                
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
-                
-                <button class="button button-block"/>Log In</button>
-                
-                </form>
-      
-              </div>
-              
-            </div><!-- tab-content -->
+            </div>
+            </div>
+            <div class="slider-img ">
+            <img class=" wow fadeInRight" data-wow-duration="2s" data-wow-delay=".5s"
+                src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/slider-img/slider-img-3.png"
+                alt="slider-img">
+            <div class="small-icon">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-1.png" alt="place your img"
+                class="slider-logo-img-1 ">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-2.png" alt="place your img"
+                class="slider-logo-img-2 ">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-3.png" alt="place your img"
+                class="slider-logo-img-3 ">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-4.png" alt="place your img"
+                class="slider-logo-img-4 ">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-5.png" alt="place your img"
+                class="slider-logo-img-5 ">
+                <img src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/img/icons/i-6.png" alt="place your img"
+                class="slider-logo-img-6 w3-spin">
 
-            <script src="jquery-3.4.1.min.js"></script>
-            <script>
-                $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-  var $this = $(this),
-      label = $this.prev('label');
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
-	  if (e.type === 'keyup') {
-			if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-    	if( $this.val() === '' ) {
-    		label.removeClass('active highlight'); 
-			} else {
-		    label.removeClass('highlight');   
-			}   
-    } else if (e.type === 'focus') {
-      
-      if( $this.val() === '' ) {
-    		label.removeClass('highlight'); 
-			} 
-      else if( $this.val() !== '' ) {
-		    label.addClass('highlight');
-			}
-    }
-
-});
-
-$('.tab a').on('click', function (e) {
-  
-  e.preventDefault();
-  
-  $(this).parent().addClass('active');
-  $(this).parent().siblings().removeClass('active');
-  
-  target = $(this).attr('href');
-
-  $('.tab-content > div').not(target).hide();
-  
-  $(target).fadeIn(600);
-  
-});
-            </script>
-            
-      </div> <!-- /form -->
-    </body>
-</html>
+    </section>
+</div>
+<script src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/js/jquery.min.js"></script>
+<script src="http://marveltheme.com/tf/html/crypcash/crypcash-a/assets/js/bootstrap.min.js"></script>
