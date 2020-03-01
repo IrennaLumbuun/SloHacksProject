@@ -18,7 +18,7 @@
             }
 
             a .option {
-                background-color: rgba(31, 94, 228, 0.9);
+                background-color: #4A6E82;;
                 margin: 1em;
                 padding:1em;
                 display:grid;
@@ -43,7 +43,7 @@
                 padding: 5px;
                 text-align: center;
             }
-            ul#content-nav {
+            ul {
                 display: flex;
                 flex-direction: column;
                 list-style-type: none;
@@ -58,7 +58,7 @@
                 position: -webkit-sticky;
                 top:10px;
                 height: 100%;
-                background-color: rgba(31, 94, 228, 0.9);
+                background-color: #4A6E82;;
                 width:max-content;
             }
             a, #table-of-content{
@@ -90,6 +90,9 @@
     <body>
         <aside>
             <div id = "table-of-content">
+                <ul id="sign-out">
+                    <a href ="index.html"><li>Sign out</li></a> 
+                </ul>
                 <ul id="content-nav">
                 <a href ="#" onclick="load('currBalance', 'current-balance.html')"><li>Current Balance</li></a>
                 <a href ="#" onclick="load('history', 'history.html')"><li>Transaction History</li></a>
