@@ -80,16 +80,20 @@
         <div id="items">
             <div class = "current-balance">
                 <h1>Your current Balance: </h1>
-                <p class ="balance" id="current-balance-balance">placeholder</p>
+                <p class ="balance" id="current-balance-balance" value="currentbalance.value">40</p>
             </div>
             <br>
             <div class = "balance-owed">
                 <h1>Balance Owed: </h1>
-                <p class ="balance" id="balance-owed-balance">placeholder</p>
+                <p class ="balance" id="balance-owed-balance" value="balanceowed">placeholder</p>
                 <button id="pay-button">Pay Balance</button>
             </div>
         </div>
           <script>
+              var currentbalance = document.getElementById("current-balance-balance");
+              currentbalance.value = 40;
+              var balanceowed = document.getElementById("balance-owed-balance");
+              balanceowed.value = 40
           </script>
     </body>
 </html>
