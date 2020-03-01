@@ -6,7 +6,7 @@
 
 body {
   /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") center center no-repeat;*/
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -18,13 +18,15 @@ body {
   color: #2A293E;
 }
 .title {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
+    color: #2A293E;
+    font-family:"Spartan";
 }
 .contact-us {
   background: #FFFFFF;
   padding: 50px 100px;
-  border-top: 10px solid #f45702;
+  border-top: 10px solid #4A6E82;
   border-radius: 30px;
 }
 
@@ -60,7 +62,7 @@ em {
 input, textarea {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  background: #f8f4e5;
+  background: #fcfbf9;
   padding-left: 5px;
   outline: none;
 }
@@ -79,7 +81,7 @@ button {
   line-height: 24pt;
   padding: 0 20px;
   border: none;
-  background: #f45702;
+  background: #4A6E82;
   color: white;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
@@ -88,8 +90,8 @@ button {
 }
 button:hover {
   background: inherit;
-  color: #f45702;
-  border-bottom: 2px solid #f45702;
+  color: #3682CE;
+  border-bottom: 2px solid #4A6E82;
 }
 
 ::selection {

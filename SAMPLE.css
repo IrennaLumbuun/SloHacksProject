@@ -1,0 +1,9 @@
+.admin-bar .navbar-custom { top: 0px !important; }
+.front-page-main {
+    margin-top: -32px !important;
+}
+@media screen and (max-width: 782px) {
+  .front-page-main {
+    margin-top: -46px !important;
+}
+}
